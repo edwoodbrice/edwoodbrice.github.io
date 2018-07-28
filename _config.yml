@@ -1,2 +1,7 @@
 theme: jekyll-theme-cayman
 title: Edwood Brice
+navbar-links:
+  About Me: "About Me"
+  Resume: "Resume"
+social-network-links:
+  twitter: edwoodbrice
