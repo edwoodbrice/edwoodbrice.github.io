@@ -4,7 +4,7 @@ navbar:
   title: "Edwood Brice"
   left:
     - text: "Resume"
-      href: resume.html
+      href: documents/Edwood_Brice_Resume_2018.pdf
     - text: "Projects"
       href: projects.html
     - text: "Blog"
