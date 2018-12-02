@@ -107,6 +107,7 @@ body {
   padding-top: 69px;
   margin-top: -69px;
 }
+
 .section h2 {
   padding-top: 69px;
   margin-top: -69px;
@@ -138,8 +139,10 @@ $(document).ready(function () {
   if (href === "")
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
+
   // mark it active
   menuAnchor.parent().addClass('active');
+
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
 });
@@ -186,14 +189,14 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="contact.html">
-    <span class="fa fa fa fa-envelope-o"></span>
+  <a href="mailto:edwoodbrice@gmail.com">
+    <span class="fa fa fa fa-envelope-o fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.linkedin.com/in/edwoodbrice/">
-    <span class="glyphicon glyphicon glyphicon glyphicon-link"></span>
+    <span class="fa fa fa fa-linkedin-square fa-lg"></span>
      
   </a>
 </li>
@@ -221,6 +224,7 @@ $(document).ready(function () {
 <h1>About Me</h1>
 <p>I am pursuing a B.S. <a href="https://www.cics.umass.edu/informatics">Informatics</a> degree with a concentration in data-science at the <a href="https://www.umass.edu">University of Massachusetts Amherst</a>. Informatics is concerned with the “[…] extraction of knowledge from large volumes of data that are structured or unstructured […]” (Vasant Dhar 3) across disciplines including computer science, biology, statistics, operations management, healthcare and etc. Data science encompasses how one can effectively make use of the collected data for the sake of answering meaningful questions that are produced by natural phenomenons, consumers, students, researchers, and etc.</p>
 <p>I am primarily interested in the research and technological oriented facets of informatics and data science. I intend to use my studies to acquire comprehensive and practical skills and experiences that will support me throughout my academic career and the professional careers that follow.</p>
+<p>I’m currently an undergraduate peer advior in the <a href="https://www.cics.umass.edu/">College of Information and Computer Sciences</a> (CICS) for the informatics major. I also mentor younger undergraduate peers in STEM through the <a href="https://www.stemapumass.org/">STEM Ambassadors Program</a> (STEM AP).</p>
 <p>Dhar, Vasant. “Data Science and Prediction.” Communications of the ACM56.12 (2013): 64-73. Association for Computing Machinery. ACM, Dec. 2013. Web. 21 Sept. 2016.</p>
 </div>
 
@@ -230,6 +234,7 @@ $(document).ready(function () {
 </div>
 
 <script>
+
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
@@ -237,6 +242,8 @@ function bootstrapStylePandocTables() {
 $(document).ready(function () {
   bootstrapStylePandocTables();
 });
+
+
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

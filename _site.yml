@@ -10,9 +10,9 @@ navbar:
     - text: "Blog"
       href: blog_dataBased.html
   right:
-    - icon: fa fa-envelope-o
-      href: contact.html
-    - icon: glyphicon glyphicon-link
+    - icon: fa fa-envelope-o fa-lg
+      href: mailto:edwoodbrice@gmail.com
+    - icon: fa fa-linkedin-square fa-lg
       href: https://www.linkedin.com/in/edwoodbrice/
     - icon: fa-twitter fa-lg
       href: https://twitter.com/edwoodbrice
