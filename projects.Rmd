@@ -1,9 +1,0 @@
-<!--- # Commonwealth Honors College: Senior Honors Thesis
-#### Overview Video
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=ljkhFfKD_vw" target="_blank"><img src="http://img.youtube.com/vi/ljkhFfKD_vw/0.jpg" 
-alt="Video thumbnail for senior thesis overview video. Virtual reality vs. physical activity" width="240" height="180" border="10" /></a>
-
-[![Video thumbnail for senior thesis overview video. Virtual reality vs. physical activity](http://img.youtube.com/vi/ljkhFfKD_vw/0.jpg)](http://www.youtube.com/watch?v=ljkhFfKD_vw)
-
--->
-
