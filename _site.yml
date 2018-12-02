@@ -1,0 +1,23 @@
+name: "Edwood Brice"
+output_dir: "."
+navbar:
+  title: "Edwood Brice"
+  left:
+    - text: "Resume"
+      href: resume.html
+    - text: "Projects"
+      href: projects.html
+    - text: "Blog"
+      href: blog_dataBased.html
+  right:
+    - icon: fa fa-envelope-o
+      href: contact.html
+    - icon: glyphicon glyphicon-link
+      href: https://www.linkedin.com/in/edwoodbrice/
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/edwoodbrice
+    
+output:
+  html_document:
+    theme: paper
+    css: 'edwoodbrice_styles.css'
