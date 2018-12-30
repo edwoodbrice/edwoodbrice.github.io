@@ -4,7 +4,7 @@
 <img src="images/edwood_profilepic.png" alt="A profile picture of Edwood Brice" width="488" height="488" class = "center">
 
 #About Me 
-I am pursuing a B.S. [Informatics](https://www.cics.umass.edu/informatics) degree with a concentration in data-science at the [University of Massachusetts Amherst](https://www.umass.edu). Informatics is concerned with the “[...] extraction of knowledge from large volumes of data that are structured or unstructured [...]” (Vasant Dhar 3) across disciplines including computer science, biology, statistics, operations management, healthcare and etc. Data science encompasses how one can effectively make use of the collected data for the sake of answering meaningful questions that are produced by natural phenomenons, consumers, students, researchers, and etc. 
+I am pursuing a B.S. [Informatics](https://www.cics.umass.edu/informatics) degree with a concentration in data-science at the [University of Massachusetts Amherst](https://www.umass.edu). Informatics is concerned with the “[...] extraction of knowledge from large volumes of data that are structured or unstructured [...]” (Vasant Dhar 3) across disciplines including computer science, biology, statistics, operations management, healthcare and etc. Data science encompasses how one can effectively make use of collected data for the sake of answering meaningful questions that are produced by natural phenomenons, consumers, students, researchers, and etc. 
 
 I am primarily interested in the research and technological oriented facets of informatics and data science. I intend to use my studies to acquire comprehensive and practical skills and experiences that will support me throughout my academic career and the professional careers that follow.
 
