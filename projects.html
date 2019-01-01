@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Projects</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,10 +19,14 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -31,10 +35,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -90,8 +96,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -107,7 +119,6 @@ body {
   padding-top: 69px;
   margin-top: -69px;
 }
-
 .section h2 {
   padding-top: 69px;
   margin-top: -69px;
@@ -127,6 +138,43 @@ body {
 .section h6 {
   padding-top: 69px;
   margin-top: -69px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -148,19 +196,173 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -178,13 +380,13 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="documents/Edwood_Brice_Resume_2018.pdf">Resume</a>
+  <a href="documents/Edwood_Brice_Resume_2019.pdf">Resume</a>
 </li>
 <li>
   <a href="projects.html">Projects</a>
 </li>
 <li>
-  <a href="blog_dataBased.html">Blog</a>
+  <a href="https://www.edwoodbrice.com/databased/">Blog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -215,14 +417,169 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore"><strong>Projects</strong></h1>
 
 </div>
 
 
+<div id="vr-exergaming-vs.traditional-physical-activity" class="section level1">
+<h1><span style="color:maroon"><strong>VR Exergaming vs. Traditional Physical Activity</strong></span></h1>
+<div id="status-in-progress" class="section level6">
+<h6><span style="color:black"><strong>Status</strong>: In progress 🚧</span></h6>
+<hr />
+</div>
+<div id="study-background" class="section level4">
+<h4><span style="color:black"> Study Background </span></h4>
+<ul>
+<li><p><span style="color:black"> It is commonly known that physical activity (PA) is beneficial to health. On the other hand, sedentary behaviors are associated with chronic diseases and obesity. One can incorporate PA into their daily schedule through a myriad of activities. From domestic house chores to structured routines conducted in a gym and everything in between. Unfortunately, despite the apparent benefits, preventing sedentary behaviors from taking root is not universally feasible for all people.</span></p></li>
+<li><p><span style="color:black"> Fortunately, alternative options are increasingly being developed. A burgeoning option is virtual reality (VR) exergaming i.e. gamified exercising, that is often conducted with VR and/or modified exercise equipment. It can be done in short bouts at the user’s convenience and the necessary technology is widely available.</span></p></li>
+<li><p><span style="color:black"> Research has shown that exergaming is a viable means of reaching PA intensities recommended by public health authorities in college students (Siegel, Haddock, Dubois, and Wilkin, 2009). As an intervention tool, research has also demonstrated that exergaming can promote PA adherence and improve chronic disease markers among young college-aged males over 6 weeks (Warburton et al., 2007). These benefits are particularly relevant to college students and their highly structured lives. In their pursuit to obtain PA, exergaming has the potential to fit their tight schedules and fulfill their PA needs.</span></p></li>
+</ul>
+</div>
+<div id="honors-thesis-purpose-implications" class="section level4">
+<h4><span style="color:black"> Honors Thesis Purpose &amp; Implications </span></h4>
+<ul>
+<li><p><span style="color:black"> VR exergaming appeals to video game enthusiasts, VR users and laypeople who are increasingly exposed to the technology. More importantly, among these people, VR exergaming has the potential to positively impact college students as well. By analyzing quantitative step count and intensity differences between VR exergaming and traditional PA, the study will objectively provide insight about how the two types of PA compare. </span></p></li>
+<li><p><span style="color:black"> To do this, it will pair three VR exergaming activities and three traditional PA exercises using metabolic equivalent (MET) values. </span></p></li>
+<li><p><span style="color:black"> Furthermore, the study will help to inform what type of PA is feasible given the constraints of an academic schedule. After the study has ended, it is meaningful to know if participants would continue the types of PA in question (VR exergaming or traditional PA) if they had the opportunity to do so. As a result, the study will also provide insight about PA adherence beyond the study via qualitative data collection. </span></p></li>
+<li><p><span style="color:black"> To carry out the study’s purpose, it will focus on college students between 18 and 23 years of age at the University of Massachusetts Amherst. This demographic does not consist of a particular student. Ultimately, no matter who the student is, it is valuable to be aware of PA alternatives that are objectively validated. This knowledge would benefit students in their effort to incorporate some form PA in their schedules at school and beyond. </span></p></li>
+</ul>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
+</style>
+<ul>
+<li><span style="color:black">
+<div class="blue">
+<p>This study would not be possible without the guidance, supervision, and support of <a href=https://www.umass.edu/sphhs/person/faculty/catrine-tudor-locke>Dr. Catrine Tudor-Locke</a>, Professor and Associate Dean for Research and Administration in the Kinesiology Department at UMass Amherst. Thank you, Dr. Tudor-Locke!</p>
+</div>
+</span></li>
+</ul>
+<hr />
+</div>
+<div id="presentation-slide-deck" class="section level4">
+<h4><span style="color:black"> Presentation Slide Deck </span></h4>
+<ul>
+<li><a href="documents/Edwood_Brice_499E_Presentation.pdf" download>Step Count and Intensity in Virtual Reality Exergaming and Traditional Physical Activity</a></li>
+</ul>
+</div>
+<div id="myhonorsthesis-overview-video" class="section level4">
+<h4><span style="color:black"> #MyHonorsThesis: Overview Video </span></h4>
+<p><a href="https://www.youtube.com/watch?v=ljkhFfKD_vw" title="Edwood Brice #MyHonorsThesis"><img src="images/vr_img.png" alt="Edwood Brice #MyHonorsThesis Overview" /></a></p>
+</div>
+<div id="references" class="section level4">
+<h4><span style="color:black"> References </span></h4>
+<p>Peterson, S. M., Furuichi, E., &amp; Ferris, D. P. (2018). Effects of virtual reality high heights exposure during beam-walking on physiological stress and cognitive loading. PLoS ONE, 13(7), e0200306. <a href="http://doi.org/10.1371/journal.pone.0200306" class="uri">http://doi.org/10.1371/journal.pone.0200306</a></p>
+<p>Siegel, S. R., L.Haddock, B., Dubois, A. M., &amp; Wilkin, L. D. (2009). Active Video/Arcade Games (Exergaming) and Energy Expenditure in College Students. International Journal of Exercise Science, 2(3), 165–174.</p>
+<p>Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, B. T., &amp; Rhodes, R.E. (2007). The health benefits of interactive video game exercise. Applied Physiology, Nutrition, and Metabolism,32(4), 655-663. <a href="doi:10.1139/h07-038" class="uri">doi:10.1139/h07-038</a></p>
+<hr />
+</div>
+</div>
+<div id="side-hustles" class="section level1">
+<h1><span style="color:maroon"><strong>Side Hustles</strong></span></h1>
+<div id="status-completed" class="section level6">
+<h6><span style="color:black"><strong>Status</strong>: Completed ✅</span></h6>
+<hr />
+</div>
+<div id="application-background" class="section level4">
+<h4><span style="color:black"> Application Background </span></h4>
+<ul>
+<li><span style="color:black">
+<div class="blue">
+<p>Side Hustles was built in colloboration with four other peers for a web programming course (Fall 2018). It matches “buyers” to “sellers”. With Side Hustles, each seller on the platform will have the opportunity to offer services (like a haircut) <strong>OR</strong> a physical product (such as a textbook) for monetary currency or something bartered.</p>
+</div>
+<p></span></p></li>
+<li><p><span style="color:black"> For the current iteration, potential users—buyers and sellers—are limited to students from UMass. When buyers select a seller to patronize, they “match” with that person i.e. they find their Sidehustle Match. </span></p></li>
+<li><p><span style="color:black"> The application was inspired by Etsy and Amazon. The salient components of each e.g. the amatuer marketplace fostered by Etsy and the intuitive and accessible UI of Amazon, were merged to create something unique that focuses on college students. </span></p></li>
+</ul>
+<hr />
+</div>
+<div id="languages-skills" class="section level4 tabset">
+<h4><span style="color:black"> Languages &amp; Skills </span></h4>
+<div id="python" class="section level5">
+<h5>Python</h5>
+<p><span style="color:black">The <a href=https://www.djangoproject.com/>Django web framework</a> was used to implement this project. I was responsible for:</p>
+<ul>
+<li><span style="color:black">getting images throughout the application to render</span></li>
+<li><span style="color:black">implementing forms that post and save data to the application’s database</span></li>
+<li><span style="color:black">contributing to user authentication via forms </span></li>
+<li><span style="color:black">general application debugging</span> </span></li>
+</ul>
+</div>
+<div id="sqlite" class="section level5">
+<h5>SQLite</h5>
+<p><span style="color:black">The Django web framework has SQLite built in. I contributed to the data model that enabled Side Hustles to read and write data.</span></p>
+</div>
+<div id="html-css" class="section level5">
+<h5>HTML &amp; CSS</h5>
+<p><span style="color:black">Side Hustles primarily makes use of the Bootstrap and W3 Schools libraries to style the pages. I was resposnible for designing and styling the application’s landing page. </span></p>
+<hr />
+</div>
+</div>
+<div id="application-pitch-slide-deck" class="section level4">
+<h4><span style="color:black"> Application Pitch Slide Deck </span></h4>
+<ul>
+<li><a href="documents/Pitch_Party_Slide_Deck.pdf" download>Side Hustles - Team J: Jellyworks</a></li>
+</ul>
+</div>
+<div id="overview-video-playlist" class="section level4">
+<h4><span style="color:black"> Overview Video Playlist </span></h4>
+<p><a href="https://www.youtube.com/watch?v=BVxx9Cvtpdw&amp;list=PLTQUO7YK94a3YqnOFAquQzY5SQ1EDKaEU" title="Side Hustles Video Overview"><img src="images/sh_img.png" alt="Side Hustles Video Overview" /></a></p>
+<hr />
+</div>
+</div>
+<div id="quickbin" class="section level1">
+<h1><span style="color:maroon"><strong>QuickBin</strong></span></h1>
+<div id="status-completed-1" class="section level6">
+<h6><span style="color:black"> <strong>Status</strong>: Completed ✅</span></h6>
+<hr />
+</div>
+<div id="application-background-1" class="section level4">
+<h4><span style="color:black"> Application Background</span></h4>
+<ul>
+<li><span style="color:black"> QuickBin maps receptacles (recycling, composting, and trash) and provides users with directions to them using Apple Maps integration.</span></li>
+<li><span style="color:black"> It was built in colloboration with three other peers for a human-computer interaction course (Fall 2018). With QuickBin, we wanted to foster sustainable behaviors and reduce the level of littering that we observed on the UMass Amherst campus.</li>
+<li><span style="color:black"> As a result, we made use of a human-centered design approach that continuously incorporated user feedback and suggestions. Our target demographic consisted of freshmen, transfer students, professors, and campus visitors because they are likely to be unaware of campus receptacle locations.</span></li>
+<li><span style="color:black">
+<div class="blue">
+For the current version, QuickBin’s goals are to:
+<ol style="list-style-type: decimal">
+<li>let users know where the receptacles are<br />
+</li>
+<li>provide directions to show users how to get them.</li>
+</ol>
+</div>
+</span></li>
+</ul>
+<hr />
+</div>
+<div id="languages-skills-1" class="section level4 tabset">
+<h4><span style="color:black">Languages &amp; Skills</span></h4>
+<div id="uxui-design" class="section level5">
+<h5>UX/UI Design</h5>
+<p><span style="color:black">QuickBin makes use of a human-centered design approach. As a result, the application went through several iterations that were inspired by comments, suggestions, and diffculties conveyed by the target demographic and their experiences with QuickBin. To ensure that the end user was involved every step of the way, I contributed to data collection that provided salient insight for implementing the app. I also designed QuickBin’s layout and icons with the goals of maximizing simplicity and accessibility in mind. This resulted in favorable results with end users when they tested the last few iterations of QuickBin.</span></p>
+</div>
+<div id="swift-xcode" class="section level5">
+<h5>Swift &amp; Xcode</h5>
+<p><span style="color:black">QuickBin was written in Swift using Xcode. I was responsible for writing the error messages that users encounter throughout the application. Additionally, Xcode was used to simulate the application to ensure that it was intuitive and functional for the target demographic.</span></p>
+<hr />
+</div>
+</div>
+<div id="application-pitch-slide-deck-1" class="section level4">
+<h4><span style="color:black"> Application Pitch Slide Deck</span></h4>
+<ul>
+<li><a href="documents/325_Application_Pitch_Presentation.pdf" download>Saving the Environment with “QuickBin”</a></li>
+</ul>
+</div>
+<div id="overview-video" class="section level4">
+<h4><span style="color:black">Overview Video</span></h4>
+<p><a href="https://www.youtube.com/watch?v=UWKZazSX4B0" title="QuickBin Video Overview"><img src="images/qb_img.png" alt="QuickBin Video Overview" /></a></p>
+</div>
+</div>
 
 
 
-
+</div>
+</div>
 
 </div>
 
