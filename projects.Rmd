@@ -13,7 +13,7 @@ output:
 
 ***
 
-#### <span style="color:black"> Study Background </span>
+#### <span style="color:black"> Honors Thesis Background </span>
  * <span style="color:black"> It is commonly known that physical activity (PA) is beneficial to health. Unfortunately, despite the apparent benefits, preventing sedentary behaviors from taking root is not universally feasible for all people.</span>
 
  * <span style="color:black">
