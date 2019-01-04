@@ -8,6 +8,6 @@ I am pursuing a B.S. [Informatics](https://www.cics.umass.edu/informatics) degre
 
 I am primarily interested in the research and technological oriented facets of informatics and data science. I intend to use my studies to acquire comprehensive and practical skills and experiences that will support me throughout my academic career and the professional careers that follow.
 
-I'm currently an undergraduate peer advior in the [College of Information and Computer Sciences](https://www.cics.umass.edu/) (CICS) for the informatics major. I also mentor younger undergraduate peers in STEM through the [STEM Ambassadors Program](https://www.stemapumass.org/) (STEM AP). 
+I'm currently an undergraduate peer advisor in the [College of Information and Computer Sciences](https://www.cics.umass.edu/) (CICS) for the informatics major. I also mentor younger undergraduate peers in STEM through the [STEM Ambassadors Program](https://www.stemapumass.org/) (STEM AP). 
 
 Dhar, Vasant. "Data Science and Prediction." Communications of the ACM56.12 (2013): 64-73. Association for Computing Machinery. ACM, Dec. 2013. Web. 21 Sept. 2016.
