@@ -101,7 +101,6 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 <span style="color:black">Side Hustles primarily makes use of the Bootstrap and W3 Schools libraries to style the pages. I was responsible for designing and styling the application's landing page.
 </span>
 
-***
 
 #### <span style="color:black"> Application Pitch Slide Deck </span>
 * <a href="documents/Pitch_Party_Slide_Deck.pdf" download>Side Hustles - Team J: Jellyworks</a>
@@ -137,7 +136,6 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 ##### Swift & Xcode
 <span style="color:black">QuickBin was written in Swift using Xcode. I was responsible for writing the error messages that users encounter throughout the application. Additionally, Xcode was used to simulate the application to ensure that it was intuitive and functional for the target demographic.</span>
 
-***
 
 #### <span style="color:black"> Application Pitch Slide Deck</span>
 * <a href="documents/325_Application_Pitch_Presentation.pdf" download>Saving the Environment with "QuickBin"</a>
