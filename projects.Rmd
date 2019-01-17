@@ -12,8 +12,8 @@ output:
 ###### <span style="color:black">**Status**: In progress 🚧</span>
 
 ***
-
-#### <span style="color:black"> Honors Thesis Background </span>
+#### <span style="color:black"> Honors Thesis Overview </span> {.tabset}
+##### <span style="color:black"> Background </span>
  * <span style="color:black"> It is commonly known that physical activity (PA) is beneficial to health. Unfortunately, despite the apparent benefits, preventing sedentary behaviors from taking root is not universally feasible for all people.</span>
 
  * <span style="color:black">
@@ -24,10 +24,11 @@ output:
 * <span style="color:black"> Research has shown that exergaming is a viable means of reaching PA intensities recommended by public health authorities in college students (Siegel, Haddock, Dubois, and Wilkin, 2009). As an intervention tool, research has also demonstrated that exergaming can promote PA adherence and improve chronic disease markers among young college-aged males over 6 weeks (Warburton et al., 2007). </span>
 * <span style="color:black"> These benefits are particularly relevant to college students and their highly structured lives. In their pursuit to obtain PA, exergaming has the potential to fit their tight schedules and fulfill their PA needs.</span>
 
-#### <span style="color:black"> Honors Thesis Purpose & Implications </span>
+##### <span style="color:black"> Purpose & Implications </span>
 * <span style="color:black"> VR exergaming appeals to video game enthusiasts, VR users and laypeople who are increasingly exposed to the technology. More importantly, among these people, VR exergaming has the potential to positively impact college students as well. By analyzing quantitative step count and intensity differences between VR exergaming and traditional PA, the study will objectively provide insight about how the two types of PA compare. </span>
 
-* <span style="color:black"> To do this, the study will pair three VR exergaming activities and three traditional PA exercises using metabolic equivalent (MET) values. The activities will be compared using step count and step intensity. These metrics will be recorded using an <a href=https://www.actigraphcorp.com/support/activity-monitors/gt9x-link/>ActiGraph GT9X</a>, a wearable accelerometer and pedometer.</span>
+* <span style="color:black">
+<div class = "blue"> To do this, the study will pair three VR exergaming activities and three traditional PA exercises using metabolic equivalent (MET) values. The activities will be compared using step count and step intensity. These metrics will be recorded using an <a href=https://www.actigraphcorp.com/support/activity-monitors/gt9x-link/>ActiGraph GT9X</a>, a wearable accelerometer and pedometer.</span></div>
 
 * <span style="color:black"> Furthermore, the study will help to inform what type of PA is feasible given the constraints of an academic schedule. After the study has ended, it is meaningful to know if participants would continue the types of PA in question (VR exergaming or traditional PA) if they had the opportunity to do so. As a result, the study will also provide insight about PA adherence beyond the study via qualitative data collection. </span>
 
@@ -37,13 +38,14 @@ output:
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 </style>
 
+##### <span style="color:black"> Acknowledgements </span>
 * <span style="color:black">
 <div class = "blue">
  This study would not be possible without the guidance, supervision, and support of <a href=https://www.umass.edu/sphhs/person/faculty/catrine-tudor-locke>Dr. Catrine Tudor-Locke</a>, Professor and Associate Dean for Research and Administration in the Kinesiology Department at UMass Amherst. I am conducting this honors thesis in the framework of her year-long course, Wearable Technologies in Physical Activity and Health. In April 2019, my honors thesis will be presented at the annual <a href=https://www.honors.umass.edu/massurc>Undergraduate Research Conference (MassURC)</a>. Thank you, Dr. Tudor-Locke!
 </div>
 </span>
 
-***
+
 
 #### <span style="color:black"> Presentation Slide Deck </span>
 * <a href="documents/Edwood_Brice_499E_Presentation.pdf" download>Step Count and Intensity in Virtual Reality Exergaming and Traditional Physical Activity</a>
@@ -94,8 +96,8 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 * <span style="color:black">general application debugging</span>
 </span>
 
-##### SQLite
-<span style="color:black">The Django web framework has SQLite built in. I contributed to the data model that enabled Side Hustles to read and write data.</span>
+##### SQL
+<span style="color:black">The Django web framework has SQLite built in. I contributed to the database model that enabled Side Hustles to read and write data.</span>
 
 ##### HTML & CSS
 <span style="color:black">Side Hustles primarily makes use of the Bootstrap and W3 Schools libraries to style the pages. I was responsible for designing and styling the application's landing page.
@@ -122,7 +124,7 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 * <span style="color:black">
 <div class = "blue">For the current version, QuickBin's goals are to:
     (1) let users know where the receptacles are  
-    (2) provide directions to show users how to get them. 
+    (2) provide directions to show users how to get them 
 </div>
 </span>
 
@@ -131,11 +133,14 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 #### <span style="color:black">Languages & Skills</span> {.tabset}
 
 ##### UX/UI Design
-<span style="color:black">QuickBin makes use of a human-centered design approach. As a result, the application went through several iterations that were inspired by comments, suggestions, and difficulties conveyed by the target demographic and their experiences with QuickBin. To ensure that the end user was involved every step of the way, I contributed to data collection that provided salient insight for implementing the app. I also designed QuickBin's layout and icons with the goals of maximizing simplicity and accessibility in mind. This resulted in favorable results with end users when they tested the last few iterations of QuickBin.</span>
+* <span style="color:black">QuickBin makes use of a human-centered design approach. As a result, the application went through several iterations that were inspired by comments, suggestions, and difficulties conveyed by the target demographic and their experiences with QuickBin. </span>
+
+* <span style="color:black"><div class = "blue">To ensure that the end user was involved every step of the way, I conducted data collection via user testing and surveys. This provided salient insight that benefitted the implementation process.</div></span>
+
+* <span style="color:black"> I also designed QuickBin's layout and icons with the goals of maximizing simplicity and accessibility in mind. This resulted in favorable results with end users when they tested the last few iterations of QuickBin.</span>
 
 ##### Swift & Xcode
-<span style="color:black">QuickBin was written in Swift using Xcode. I was responsible for writing the error messages that users encounter throughout the application. Additionally, Xcode was used to simulate the application to ensure that it was intuitive and functional for the target demographic.</span>
-
+* <span style="color:black"> QuickBin was written in Swift using Xcode. I was responsible for writing the error messages that users encounter throughout the application. Additionally, Xcode was used to simulate the application to ensure that it was intuitive and functional for the target demographic.</span>
 
 #### <span style="color:black"> Application Pitch Slide Deck</span>
 * <a href="documents/325_Application_Pitch_Presentation.pdf" download>Saving the Environment with "QuickBin"</a>
