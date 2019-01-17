@@ -8,7 +8,7 @@ output:
       collapsed: true
       smooth_scroll: true
 ---
-# <span style="color:maroon">**VR Exergaming vs. Traditional Physical Activity**</span>
+# <span style="color:maroon">VR Exergaming vs. Traditional Physical Activity</span>
 ###### <span style="color:black">**Status**: In progress 🚧</span>
 
 ***
@@ -69,7 +69,7 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 
 ***
 
-# <span style="color:maroon">**Side Hustles**</span>
+# <span style="color:maroon"> Side Hustles </span>
 ###### <span style="color:black">**Status**: Completed ✅</span>
 
 ***
@@ -112,7 +112,7 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 
 ***
 
-# <span style="color:maroon">**QuickBin**</span>
+# <span style="color:maroon"> QuickBin </span>
 ###### <span style="color:black"> **Status**: Completed ✅</span>
 
 ***
