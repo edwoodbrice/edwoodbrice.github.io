@@ -4,14 +4,32 @@ output:
   html_document:
     toc: true
     toc_depth: 4
-    toc_float:
+    toc_float: 
       collapsed: true
       smooth_scroll: true
 ---
-# <span style="color:maroon">VR Exergaming vs. Traditional Physical Activity</span>
-###### <span style="color:black">**Status**: In progress 🚧</span>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
 
-***
+div.card {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  border-radius: 10px;}
+  
+</style>
+
+# <span style="color:maroon">VR Exergaming vs. Traditional Physical Activity</span>
+<div class="card">
+###### <span style="color:black">**Status**: In progress 🚧 </span>
+<span>
+During the month of February 2019, data for both conditions (traditional physical activity and VR exergaming) will be collected with the help of recruited volunteers.</span>
+</div>
+
+<hr style="border: none;">
+
 #### <span style="color:black"> Honors Thesis Overview </span> {.tabset}
 ##### <span style="color:black"> Background </span>
  * <span style="color:black"> It is commonly known that physical activity (PA) is beneficial to health. Unfortunately, despite the apparent benefits, preventing sedentary behaviors from taking root is not universally feasible for all people.</span>
@@ -34,29 +52,112 @@ output:
 
 * <span style="color:black"> The target demographic for this study consists of college students between 18 and 23 years of age at the University of Massachusetts Amherst. The study is not looking for a particular student in this age range. Ultimately, no matter who the student is, it is valuable to be aware of PA alternatives. This knowledge would benefit students in their effort to incorporate some form PA in their schedules at school and beyond. </span>
 
-<style>
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 5px;}
-</style>
+##### <span style="color:black"> Study Abstract </span>
+* <span style="color:black"> 
+Edwood Vladmy Brice  
+Catrine Tudor-Locke (Faculty Sponsor)  
+Department of Kinesiology, UMass Amherst  
+<u>Step Count and Intensity in Virtual Reality Exergaming and Traditional Physical Activity</u>
+</span>
+
+* <span style="color:black"> It is commonly known that physical activity (PA) is beneficial to health. Unfortunately, despite the apparent benefits, obtaining adequate PA is not feasible for all people. Fortunately, a burgeoning alternative option is virtual reality (VR) exergaming (i.e. gamified exercising). It is often conducted with VR and/or modified exercise equipment. It can be done in short bouts at the user’s convenience and the necessary technology is accessible. The study will benefit college students (the target demographic) in their effort to incorporate PA in their schedules. <span style="color:maroon">**PURPOSE**</span>: To analyze step count and step intensity (vector magnitude) differences between VR exergaming and traditional PA. <span style="color:maroon">**METHODS**</span>: 3 men and women (aged 18-23 years) at UMass Amherst will be recruited. Before data are collected, a warm-up will be conducted and the protocol will be reiterated. Step count and step intensity data from 3 traditional PA exercises and 3 VR exergaming activities will be recorded with an ActiGraph GT9X (a wearable accelerometer and pedometer). Each game and exercise will be conducted for 5 minutes. <span style="color:maroon">**RESULTS**</span>: Data produced will show that VR exergaming elicits PA that is objectively comparable to traditional PA in terms of step count and step intensity. It will also provide subjective insight via the Borg Rating of Perceived Exertion Scale and questionnaire data. <span style="color:maroon">**CONCLUSION**</span>: The benefit of objectively verified PA is particularly relevant to college students and their structured lives. In their pursuit of PA, exergaming has the potential to galvanize future efforts to carry out some form of PA regularly.</span>
 
 ##### <span style="color:black"> Acknowledgements </span>
 * <span style="color:black">
 <div class = "blue">
  This study would not be possible without the guidance, supervision, and support of <a href=https://www.umass.edu/sphhs/person/faculty/catrine-tudor-locke>Dr. Catrine Tudor-Locke</a>, Professor and Associate Dean for Research and Administration in the Kinesiology Department at UMass Amherst. I am conducting this honors thesis in the framework of her year-long course, Wearable Technologies in Physical Activity and Health. In April 2019, my honors thesis will be presented at the annual <a href=https://www.honors.umass.edu/massurc>Undergraduate Research Conference (MassURC)</a>. Thank you, Dr. Tudor-Locke!
-</div>
+ </div>
 </span>
 
+#### <span style="color:black"> Languages, Skills, & Technical Insight </span>{.tabset}
 
+##### Python & R
+* <span style="color:black"> Python and R will be used to analyze and clean collected data for this study. They will also produce visualizations that will convey and supplement findings. </span>
+</span>
 
-#### <span style="color:black"> Presentation Slide Deck </span>
+##### Research
+<span style="color:black"> The Commonwealth Honors College (CHC) thesis is meant allow students to produce original scholarship. It will ultimately result in a poster, public presentations, and a scholarly manuscript that will be archived by CHC. 
+
+<span style="color:black"> As a result of systematic research efforts and targeted inquires, this particular thesis has fostered the methodologies, techniques and concepts of:</span>
+
+* <span style="color:black">Reviewing literature to derive current knowledge</span>
+* <span style="color:black">Producing a cohesive manuscript</span>
+* <span style="color:black">Data collection, management, and cleaning</span>
+* <span style="color:black">Presenting research procedures and findings to audiences</span>
+* <span style="color:black">Participant recruitment</span>
+* <span style="color:black">Questionnaire production</span>
+* <span style="color:black">Institutional Review Board (IRB) adherence</span>
+* <span style="color:black">Establishing an effective data collection plan</span> 
+* <span style="color:black">Networking and outreaching</span>
+
+</span>
+
+##### Code Chunks
+<div>
+#### <span style="color:black"> Generating Step Count & Vector Magnitude Plots </span>
+<span style="color:black"> For my honors thesis, some of the data will be visualized with plots that present average step count and average step intensity (vector magnitude) over the course of data collection periods (15 minutes)</span>.
+
+<span style="color:black"> First I read in the data and remove extraneous data collected by the ActiGraph GT9X, the accelerometer and pedometer that I am using for the study. Afterwards, I rename the columns so that the data is readable.</span>
+
+```{r, eval=FALSE}
+sm_viz <- read_csv("~/Participant_Data/Traditional_Physical_Activity.csv")
+sm_viz <- within(sm_viz, rm(X3,X4,X5,X8,X9,X10,X11,X12))
+names(sm_viz) <- c("date","epoch","vm","steps")
+sm_viz <- sm_viz[-c(1), ]
+```
+
+<span style="color:black">Afterwards, I convert integer and date data to the proper formats so that I can work with them. By combining the epoch and date columns into a date_time column, I am able to filter the data set by date and time later on. This allows me to remove extraneous data collected in between the study's activities in both conditions.</span> 
+
+```{r, eval=FALSE}
+sm_viz$steps <- as.integer(sm_viz$steps)
+sm_viz$vm <- as.integer(sm_viz$vm)
+sm_viz$date <- as.Date(sm_viz$date, "%m/%d/%Y")
+
+sm_viz$date_time <- as.POSIXlt(paste(sm_viz$date, sm_viz$epoch), format="%Y-%m-%d %I:%M:%S %p")
+
+final_viz <- data.frame(sm_viz$date_time, sm_viz$steps,sm_viz$vm)
+names(final_viz) <- c("date_time","steps","vm")
+```
+
+<span style="color:black"> Now, I am interested in grouping the data in 15 minute chunks. Each minute will consist of the average step count and average step intensity conducted in that minute.</span> 
+
+```{r, eval=FALSE}
+grouped_data <- final_viz %>%
+  group_by(date_time = cut(date_time, breaks="1 min")) %>%
+  summarize(steps = mean(steps), vm = mean(vm))
+  
+grouped_data <- as.data.frame(grouped_data)
+
+grouped_data$date_time <- as.POSIXct(grouped_data$date_time,format="%Y-%m-%d %H:%M:%S")
+
+names(grouped_data) <- c("date_time","steps","Vector Magnitude")
+```
+
+<span style="color:black"> With the grouped data ready, I am now able to visualize the data using ggplot. The x-axis represents the total amount of time that the PA in question will be conducted between the two conditions. The y-axis is the average number of steps conducted a minute. The line plot that is produced is colored by vector magnitude. The vector magnitude is the square root of the sum of the squares of the x, y, and z axis data recorded by the ActiGraph GT9X. It is interpreted as step intensity. As the color increasingly becomes red, the steps are more intense. As the color becomes bluer, the steps are less intense.</span> 
+
+```{r, eval=FALSE}
+ggplot(grouped_data, aes(date_time, steps, colour=`Vector Magnitude`)) + 
+    geom_line() + 
+    scale_color_gradient(low="blue", high="red") +
+    ylab("Average Steps per Minute") + 
+    xlab("Time (15 Minutes)") + ggtitle("ActiGraph GT9X (Traditional PA)") + theme(plot.title = element_text(hjust = 0.5))
+```   
+
+<img src="images/Traditional_PA.png" alt="Traditional Physical Activity Mock Data" class = "center">
+
+</div>
+
+##### Slide Deck
 * <a href="documents/Edwood_Brice_499E_Presentation.pdf" download>Step Count and Intensity in Virtual Reality Exergaming and Traditional Physical Activity</a>
 
-#### <span style="color:black"> #MyHonorsThesis: Overview Video </span>
+
+#### <span style="color:black"> #MyHonorsThesis: Honors Thesis Overview Video </span>
 [![Edwood Brice #MyHonorsThesis Overview](images/vr_img.png)](https://www.youtube.com/watch?v=ljkhFfKD_vw "Edwood Brice #MyHonorsThesis")
 
-
-<span style="color:maroon"><center> This video was submitted to the UMass Commonwealth Honors College <a href=https://www.honors.umass.edu/news/myhonorsthesis-video-contest>#MyHonorsThesis</a> contest and was selected as one of the three winning entries. Entrants were required to describe their honors thesis in 45 seconds or less. </center></span>
+<span style="color:maroon"><center> This video was submitted to the UMass Commonwealth Honors College <a href=https://www.honors.umass.edu/braggingwrites/and-myhonorsthesis-winners-are>#MyHonorsThesis contest</a> and was selected as one of the three winning entries. Entrants were required to describe their honors thesis in 45 seconds or less. </center></span>
 
 ***
+
 
 #### <span style="color:black"> References </span>
 
@@ -66,18 +167,68 @@ Siegel, S. R., L.Haddock, B., Dubois, A. M., & Wilkin, L. D. (2009). Active Vide
 
 Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, B. T., & 		Rhodes, R.E. (2007). The health benefits of interactive video game exercise. Applied Physiology, Nutrition, and Metabolism,32(4), 655-663. doi:10.1139/h07-038
 
+***
+
+# <span style="color:maroon"> Galvanizing Interest in Computing</span>
+<div class="card">
+###### <span style="color:black">**Status**: In progress 🚧 </span>
+<span>
+The UMass STEM Ambassadors: "Ask Me Anything" event will take place on March, 4th, 2019. 
+</span>
+</div>
+
+<hr style="border: none;">
+
+#### <span style="color:black"> Event Overview </span>
+
+* <span style="color:black"> The UMass STEM Ambassadors Program (STEM AP) focuses on fostering a positive STEM community through workshops and activities pertaining to careers, internships, research, medical school, and etc. among freshman to senior undergraduates. As of 2019, the roster has over a hundred students. Ultimately, STEM AP's main goals are to:
+<ul>
+  <li> promote levels of STEM retention 
+  <li> encourage students to enroll in graduate studies
+  <li> increase interest in STEM careers 
+</ul>
+  
+ </span> 
+
+* <span style="color:black"> On March 4th, 2019, I will host professionals and students in computing oriented careers and majors for a live "Ask Me Anything" event. It will be presented in a speed-dating format where all of the STEM Ambassador students will rotate every couple of minutes between the attendees. </span> 
+
+* <span style="color:black"><div class = "blue"> The event will focus on exposing students to the breadth of careers and opportunities that are feasible in the context of computing. By giving the  STEM AP students a chance to ask a handful of professionals and students anything in a casual environment, I hope to galvanize interest in computing and inspire pathways towards potential careers. 
+</div>
+</span> 
+</span>  
+
+***
+
+# <span style="color:maroon"> HoneyPot 🍯 </span>
+<div class="card">
+###### <span style="color:black">**Status**: In progress 🚧 </span>
+<span>
+HoneyPot was pitched at the [UMass Berthiaume Center for Entrepreneurship](https://www.isenberg.umass.edu/centers/berthiaume-center-for-entrepreneurship) Idea Jam. It is currently being developed for the [ULaunch @ UMass competition](https://www.umass.edu/events/ulaunch-umass-1) in March 2019.
+</span>
+</div>
+
+<hr style="border: none;">
+
+#### <span style="color:black"> Application Background </span>
+* <span style="color:black"> HoneyPot is a social loaning platform that facilitates the process of securing micro-funding for a burgeoning venture. It is meant to bridge the economic gap that traditional financial institutions often deem unproductive for their interests. </span> 
+
+* <span style="color:black">  HoneyPot's target demographic consists of entrepreneurs who want to launch their ideas but lack funding to sufficiently do so on their own. </span>  
+
+* <span style="color:black"> Peer-to-peer (1:1) and group loaning between users will be supported. The latter is based on the tried and true West Indian and African tradition of sou-sou money. </span>
+
+* <span style="color:black"> Through custom settings that enables one to reasonably loan or receive money, HoneyPot will ultimately provide an alternative to traditional institutions by leveraging the financial support of one's network.</span>
 
 ***
 
 # <span style="color:maroon"> Side Hustles </span>
+<div class="card">
 ###### <span style="color:black">**Status**: Completed ✅</span>
-
-***
-#### <span style="color:black"> Application Background </span>
-* <span style="color:black">
-<div class = "blue">Side Hustles was built in collaboration with four other peers for a web programming course (Fall 2018). It matches “buyers” to “sellers”. With Side Hustles, each seller on the platform will have the opportunity to offer services (like a haircut) **OR** a physical product (such as a textbook) for monetary currency or something bartered. 
+<span> Side Hustles was built in collaboration with four other peers for a web programming course (Fall 2018). It matches “buyers” to “sellers”. With Side Hustles, each seller on the platform will have the opportunity to offer services (like a haircut) **OR** a physical product (such as a textbook) for monetary currency or something bartered. </span>
 </div>
-</span>
+
+<hr style="border: none;">
+
+#### <span style="color:black"> Application Background </span>
 
 * <span style="color:black"> For the current iteration, potential users---buyers and sellers---are limited to students from UMass. When buyers select a seller to patronize, they “match” with that person i.e. they find their Side Hustle Match. </span>
 
@@ -85,7 +236,7 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 
 ***
 
-#### <span style="color:black"> Languages & Skills </span>{.tabset}
+#### <span style="color:black"> Languages, Skills, & Technical Insight </span>{.tabset}
 
 ##### Python
 <span style="color:black">The <a href=https://www.djangoproject.com/>Django web framework</a> was used to implement this project. I was responsible for:
@@ -103,23 +254,28 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 <span style="color:black">Side Hustles primarily makes use of the Bootstrap and W3 Schools libraries to style the pages. I was responsible for designing and styling the application's landing page.
 </span>
 
-
-#### <span style="color:black"> Application Pitch Slide Deck </span>
+##### Slide Deck
 * <a href="documents/Pitch_Party_Slide_Deck.pdf" download>Side Hustles - Team J: Jellyworks</a>
 
 #### <span style="color:black"> Overview Video Playlist </span>
 [![Side Hustles Video Overview](images/sh_img.png)](https://www.youtube.com/watch?v=BVxx9Cvtpdw&list=PLTQUO7YK94a3YqnOFAquQzY5SQ1EDKaEU "Side Hustles Video Overview")
 
 ***
-
 # <span style="color:maroon"> QuickBin </span>
-###### <span style="color:black"> **Status**: Completed ✅</span>
+<div class="card">
 
-***
+###### <span style="color:black"> **Status**: Completed ✅ </span>
+
+<span>
+QuickBin will be submitted as an entry for the 2019 [Undergraduate Sustainability Research Award](http://guides.library.umass.edu/c.php?g=672434&p=4735882). It was built in collaboration with three other peers for a human-computer interaction course (Fall 2018).
+
+</span>
+</div>
+
+<hr style="border: none;">
 
 #### <span style="color:black"> Application Background</span>
-* <span style="color:black"> QuickBin maps receptacles (recycling, composting, and trash) and provides users with directions to them using Apple Maps integration.</span>
-* <span style="color:black"> It was built in collaboration with three other peers for a human-computer interaction course (Fall 2018). With QuickBin, we wanted to foster sustainable behaviors and reduce the level of littering that we observed on the UMass Amherst campus. 
+* <span style="color:black"> QuickBin maps receptacles (recycling, composting, and trash) and provides users with directions to them using Apple Maps integration. The application was created to foster sustainable behaviors and reduce the level of littering observed on the UMass Amherst campus. 
 * <span style="color:black"> As a result, we made use of a human-centered design approach that continuously incorporated user feedback and suggestions. Our target demographic consisted of freshmen, transfer students, professors, and campus visitors because they are likely to be unaware of campus receptacle locations.</span>
 * <span style="color:black">
 <div class = "blue">For the current version, QuickBin's goals are to:
@@ -130,19 +286,19 @@ Warburton, D. E., Bredin, S. S., Horita, L. T., Zbogar, D., Scott, J. M., Esch, 
 
 ***
 
-#### <span style="color:black">Languages & Skills</span> {.tabset}
+#### <span style="color:black">Languages, Skills, & Technical Insight</span> {.tabset}
 
 ##### UX/UI Design
 * <span style="color:black">QuickBin makes use of a human-centered design approach. As a result, the application went through several iterations that were inspired by comments, suggestions, and difficulties conveyed by the target demographic and their experiences with QuickBin. </span>
 
-* <span style="color:black"><div class = "blue">To ensure that the end user was involved every step of the way, I conducted data collection via user testing and surveys. This provided salient insight that benefitted the implementation process.</div></span>
+* <span style="color:black"><div class = "blue">To ensure that the end user was involved every step of the way, I conducted data collection via user testing and surveys. This provided salient insight that benefited the implementation process.</div></span>
 
 * <span style="color:black"> I also designed QuickBin's layout and icons with the goals of maximizing simplicity and accessibility in mind. This resulted in favorable results with end users when they tested the last few iterations of QuickBin.</span>
 
 ##### Swift & Xcode
 * <span style="color:black"> QuickBin was written in Swift using Xcode. I was responsible for writing the error messages that users encounter throughout the application. Additionally, Xcode was used to simulate the application to ensure that it was intuitive and functional for the target demographic.</span>
 
-#### <span style="color:black"> Application Pitch Slide Deck</span>
+##### Slide Deck
 * <a href="documents/325_Application_Pitch_Presentation.pdf" download>Saving the Environment with "QuickBin"</a>
 
 #### <span style="color:black">Overview Video</span>

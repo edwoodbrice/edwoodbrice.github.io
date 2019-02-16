@@ -11,6 +11,8 @@
 
 * <span style="color:black"> I'm currently an undergraduate peer advisor in the [College of Information and Computer Sciences](https://www.cics.umass.edu/) (CICS) for the informatics major. I also mentor younger undergraduate peers in STEM through the UMass [STEM Ambassadors Program](https://www.stemapumass.org/) (STEM AP).</span> 
 
+* <span style="color:black"> In my spare time, I love to explore entreprenurial avenues that make use of my skills. I also enjoy cooking and trying out new recipies! I am currently working on making perfect [sòs pwa nwa](http://loveforhaitianfood.com/sos-pwa-nwa-black-bean-puree-2/). It is typically served with white rice and it's my absolute favorite meal 🍛 </span> 
+
 ***
 
 Dhar, Vasant. "Data Science and Prediction." Communications of the ACM56.12 (2013): 64-73. Association for Computing Machinery. ACM, Dec. 2013. Web. 21 Sept. 2016.
