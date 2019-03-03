@@ -438,10 +438,10 @@ div.card {
 <h1><span style="color:maroon">VR Exergaming vs. Traditional Physical Activity</span></h1>
 <div class="card">
 <h6 id="status-in-progress"><span style="color:black"><strong>Status</strong>: In progress 🚧 </span></h6>
-<p><span> During the month of February 2019, data for both conditions (traditional physical activity and VR exergaming) will be collected with the help of recruited volunteers.</span></p>
+<p><span> Data for both conditions (traditional physical activity and VR exergaming) will be collected with the help of recruited volunteers in February and March 2019.</span></p>
 </div>
 <hr style="border: none;">
-<div id="honors-thesis-overview" class="section level4 tabset">
+<div id="honors-thesis-overview" class="section level4 tabset tabset-fade">
 <h4><span style="color:black"> Honors Thesis Overview </span></h4>
 <div id="background" class="section level5">
 <h5><span style="color:black"> Background </span></h5>
@@ -489,42 +489,25 @@ This study would not be possible without the guidance, supervision, and support 
 </ul>
 </div>
 </div>
-<div id="languages-skills-technical-insight" class="section level4 tabset">
+<div id="languages-skills-technical-insight" class="section level4 tabset tabset-fade">
 <h4><span style="color:black"> Languages, Skills, &amp; Technical Insight </span></h4>
 <div id="python-r" class="section level5">
 <h5>Python &amp; R</h5>
 <ul>
-<li><span style="color:black"> Python and R will be used to analyze and clean collected data for this study. They will also produce visualizations that will convey and supplment findings. </span> </span></li>
+<li><span style="color:black"> Python and R will be used to analyze and clean collected data for this study. They will also produce visualizations that will convey and supplement findings. </span> </span></li>
 </ul>
-</div>
-<div id="research" class="section level5">
-<h5>Research</h5>
-<p><span style="color:black"> The Commonwealth Honors College (CHC) thesis is meant allow students to produce original scholarship. It will ultimately result in a poster, public presentations, and a scholarly manuscript that will be archived by CHC.</p>
-<p><span style="color:black"> As a result of systematic research efforts and targeted inquires, this particular thesis has fostered the methodologies, techniques and concepts of:</span></p>
-<ul>
-<li><span style="color:black">Revieiwing literature to derive current knowledge</span></li>
-<li><span style="color:black">Producing a cohesive manuscript</span></li>
-<li><span style="color:black">Data collection, management, and cleaning</span></li>
-<li><span style="color:black">Presenting research procedures and findings to audiences</span></li>
-<li><span style="color:black">Participant recruitment</span></li>
-<li><span style="color:black">Questionnaire production</span></li>
-<li><span style="color:black">Institutional Review Board (IRB) adherence</span></li>
-<li><span style="color:black">Establishing an effective data collection plan</span></li>
-<li><span style="color:black">Networking and outreaching</span></li>
-</ul>
-<p></span></p>
 </div>
 <div id="code-chunks" class="section level5">
 <h5>Code Chunks</h5>
 <div>
-<h4 id="generating-step-count-vector-magnitude-plots"><span style="color:black"> Generating Step Count &amp; Vector Magnitude Plots </span></h4>
+<h5 id="generating-step-count-vector-magnitude-plots"><span style="color:black"> Generating Step Count &amp; Vector Magnitude Plots </span></h5>
 <p><span style="color:black"> For my honors thesis, some of the data will be visualized with plots that present average step count and average step intensity (vector magnitude) over the course of data collection periods (15 minutes)</span>.</p>
 <p><span style="color:black"> First I read in the data and remove extraneous data collected by the ActiGraph GT9X, the accelerometer and pedometer that I am using for the study. Afterwards, I rename the columns so that the data is readable.</span></p>
 <pre class="r"><code>sm_viz &lt;- read_csv(&quot;~/Participant_Data/Traditional_Physical_Activity.csv&quot;)
 sm_viz &lt;- within(sm_viz, rm(X3,X4,X5,X8,X9,X10,X11,X12))
 names(sm_viz) &lt;- c(&quot;date&quot;,&quot;epoch&quot;,&quot;vm&quot;,&quot;steps&quot;)
 sm_viz &lt;- sm_viz[-c(1), ]</code></pre>
-<p><span style="color:black">Afterwards, I convert integer and date data to the proper formats so that I can work with them. By combining the epoch and date columns into a date_time column, I am able to filter the data set by date and time later on. This allows me to remove extraneous data collected in between the study’s activities in both conditions.</span></p>
+<p><span style="color:black">Afterwards, I convert integer and date data to the proper formats so that I can work with them. By combining the epoch and date columns into a date_time column, I am able to filter the data set by date and time if necessary. This allows me to remove extraneous data collected in between the study’s activities in both conditions. It also allows me to group data by time in the next step.</span></p>
 <pre class="r"><code>sm_viz$steps &lt;- as.integer(sm_viz$steps)
 sm_viz$vm &lt;- as.integer(sm_viz$vm)
 sm_viz$date &lt;- as.Date(sm_viz$date, &quot;%m/%d/%Y&quot;)
@@ -551,6 +534,23 @@ names(grouped_data) &lt;- c(&quot;date_time&quot;,&quot;steps&quot;,&quot;Vector
     xlab(&quot;Time (15 Minutes)&quot;) + ggtitle(&quot;ActiGraph GT9X (Traditional PA)&quot;) + theme(plot.title = element_text(hjust = 0.5))</code></pre>
 <p><img src="images/Traditional_PA.png" alt="Traditional Physical Activity Mock Data" class = "center"></p>
 </div>
+</div>
+<div id="research" class="section level5">
+<h5>Research</h5>
+<p><span style="color:black"> The Commonwealth Honors College (CHC) thesis is meant to allow students to produce original scholarship. It will ultimately result in a poster, public presentations, and a scholarly manuscript that will be archived by CHC.</p>
+<p><span style="color:black"> As a result of systematic research efforts and targeted inquires, this particular thesis has fostered the methodologies, techniques and concepts of:</span></p>
+<ul>
+<li><span style="color:black">Reviewing literature to derive current knowledge</span></li>
+<li><span style="color:black">Producing a cohesive manuscript</span></li>
+<li><span style="color:black">Data collection, management, and cleaning</span></li>
+<li><span style="color:black">Presenting research procedures and findings to audiences</span></li>
+<li><span style="color:black">Participant recruitment</span></li>
+<li><span style="color:black">Questionnaire production</span></li>
+<li><span style="color:black">Institutional Review Board (IRB) adherence</span></li>
+<li><span style="color:black">Establishing an effective data collection plan</span></li>
+<li><span style="color:black">Networking and outreaching</span></li>
+</ul>
+<p></span></p>
 </div>
 <div id="slide-deck" class="section level5">
 <h5>Slide Deck</h5>
@@ -606,7 +606,16 @@ increase interest in STEM careers
 </div>
 <p></span> </span></p></li>
 </ul>
+</div>
+<div id="languages-skills-technical-insight-1" class="section level4 tabset tabset-fade">
+<h4><span style="color:black"> Languages, Skills, &amp; Technical Insight </span></h4>
+<div id="r" class="section level5">
+<h5>R</h5>
+<ul>
+<li><span style="color:black"> R studio will be used to analyze and clean survey data for this event. It will also be used to produce visualizations that will convey the survey results. </span> </span></li>
+</ul>
 <hr />
+</div>
 </div>
 </div>
 <div id="honeypot" class="section level1">
@@ -631,18 +640,19 @@ increase interest in STEM careers
 <h1><span style="color:maroon"> Side Hustles </span></h1>
 <div class="card">
 <h6 id="status-completed"><span style="color:black"><strong>Status</strong>: Completed ✅</span></h6>
-<p><span> Side Hustles was built in collaboration with four other peers for a web programming course (Fall 2018). It matches “buyers” to “sellers”. With Side Hustles, each seller on the platform will have the opportunity to offer services (like a haircut) <strong>OR</strong> a physical product (such as a textbook) for monetary currency or something bartered. </span></p>
+<p><span> Side Hustles was built in collaboration with four other peers for a web programming course (Fall 2018).</span></p>
 </div>
 <hr style="border: none;">
 <div id="application-background-1" class="section level4">
 <h4><span style="color:black"> Application Background </span></h4>
 <ul>
 <li><p><span style="color:black"> For the current iteration, potential users—buyers and sellers—are limited to students from UMass. When buyers select a seller to patronize, they “match” with that person i.e. they find their Side Hustle Match. </span></p></li>
+<li><p><span style="color:black"> Each seller on the platform will have the opportunity to offer services (like a haircut) <strong>OR</strong> a physical product (such as a textbook) for monetary currency or something bartered.</span></p></li>
 <li><p><span style="color:black"> The application was inspired by Etsy and Amazon. The salient components of each e.g. the amateur marketplace fostered by Etsy and the intuitive and accessible UI of Amazon, were merged to create something unique that focuses on college students. </span></p></li>
 </ul>
 <hr />
 </div>
-<div id="languages-skills-technical-insight-1" class="section level4 tabset">
+<div id="languages-skills-technical-insight-2" class="section level4 tabset tabset-fade">
 <h4><span style="color:black"> Languages, Skills, &amp; Technical Insight </span></h4>
 <div id="python" class="section level5">
 <h5>Python</h5>
@@ -656,11 +666,15 @@ increase interest in STEM careers
 </div>
 <div id="sql" class="section level5">
 <h5>SQL</h5>
-<p><span style="color:black">The Django web framework has SQLite built in. I contributed to the database model that enabled Side Hustles to read and write data.</span></p>
+<ul>
+<li><span style="color:black">The Django web framework has SQLite built in. I contributed to the database model that enabled Side Hustles to read and write data.</span></li>
+</ul>
 </div>
 <div id="html-css" class="section level5">
 <h5>HTML &amp; CSS</h5>
-<p><span style="color:black">Side Hustles primarily makes use of the Bootstrap and W3 Schools libraries to style the pages. I was responsible for designing and styling the application’s landing page. </span></p>
+<ul>
+<li><span style="color:black">Side Hustles primarily makes use of the Bootstrap and W3 Schools libraries to style the pages. I was responsible for designing and styling the application’s landing page. </span></li>
+</ul>
 </div>
 <div id="slide-deck-1" class="section level5">
 <h5>Slide Deck</h5>
@@ -701,7 +715,7 @@ For the current version, QuickBin’s goals are to:
 </ul>
 <hr />
 </div>
-<div id="languages-skills-technical-insight-2" class="section level4 tabset">
+<div id="languages-skills-technical-insight-3" class="section level4 tabset tabset-fade">
 <h4><span style="color:black">Languages, Skills, &amp; Technical Insight</span></h4>
 <div id="uxui-design" class="section level5">
 <h5>UX/UI Design</h5>
