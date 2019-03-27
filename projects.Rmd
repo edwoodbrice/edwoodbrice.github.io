@@ -25,7 +25,7 @@ div.card {
 <div class="card">
 ###### <span style="color:black">**Status**: In progress 🚧 </span>
 <span>
-Data for both conditions (traditional physical activity and VR exergaming) will be collected with the help of recruited volunteers in February and March 2019.</span>
+My honors thesis was selected to receive a [UMass Commononwealth Honors College (CHC) Honors Dean's Award in March 2019](https://www.honors.umass.edu/scholarship/honors-deans-award). It was also a winning entry in the [CHC #MyHonorsThesis contest](https://www.honors.umass.edu/braggingwrites/and-myhonorsthesis-winners-are).</span>
 </div>
 
 <hr style="border: none;">
