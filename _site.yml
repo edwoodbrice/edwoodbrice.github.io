@@ -3,8 +3,6 @@ output_dir: "."
 navbar:
   title: "Edwood Brice"
   left:
-    - text: "Resume"
-      href: documents/Edwood_Brice_Resume_2019.pdf
     - text: "Projects"
       href: projects.html
     - text: "Blog"
