@@ -2,6 +2,7 @@
 
 <img src="images/EB_Boston_Version3.svg" alt="Edwood Brice's profile picture" class = "center">
 
+<title> Edwood Brice </title>
 
 # <span style="color:maroon">About Me</span>
 * <span style="color:black">I graduated with a B.S. [Informatics & Data Science](https://www.cics.umass.edu/informatics) degree at the [University of Massachusetts Amherst](https://www.umass.edu) in May 2019. Data science is concerned with the “[...] extraction of knowledge from large volumes of data that are structured or unstructured [...]” (Vasant Dhar 3) across disciplines including computer science, statistics, biology, healthcare and etc. Informatics encompasses how one can effectively make use of collected data for the sake of answering meaningful questions that are produced by natural phenomenons, consumers, students, and researchers alike.</span> 
