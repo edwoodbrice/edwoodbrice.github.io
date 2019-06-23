@@ -1,3 +1,7 @@
+<!-- old resume; post graduation resume will be uploaded soon --> 
+
+<!--
 <object data="documents/Edwood_Brice_Resume_2019.pdf" type="application/pdf" width= "950" height= "605">
   <p>.PDF download link <a href="documents/Edwood_Brice_Resume_2019.pdf"></a></p>
 </object>
+-->
