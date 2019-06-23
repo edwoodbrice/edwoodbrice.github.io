@@ -27,7 +27,7 @@ div.card {
 <div class="card">
 ###### <span style="color:black">**Status**: Completed ✅</span>
 <span>
-My honors thesis was selected to receive a [UMass Commononwealth Honors College (CHC) Honors Dean's Award in March 2019](https://www.honors.umass.edu/scholarship/honors-deans-award). It was also a winning entry in the [CHC #MyHonorsThesis contest](https://www.honors.umass.edu/braggingwrites/and-myhonorsthesis-winners-are). In April 2019, my thesis was officially defended. Additionally, it was presented at the [Massachusetts Undergraduate Research Conference (MassURC)](https://www.honors.umass.edu/massurc) and the [UMass Research Art Exhibition (RASE)](https://rase.steveacquah.umasscreate.net/). </span>
+My honors thesis was selected to receive a [UMass Commononwealth Honors College (CHC) Honors Dean's Award in March 2019](https://www.honors.umass.edu/scholarship/honors-deans-award). It was also a winning entry in the [CHC #MyHonorsThesis contest](https://www.honors.umass.edu/braggingwrites/and-myhonorsthesis-winners-are). In April 2019, my thesis was officially defended. Additionally, it was presented at the [Massachusetts Undergraduate Research Conference (MassURC)](https://www.honors.umass.edu/massurc) and the [UMass Research Art Exhibition (RASE)](https://rase.steveacquah.umasscreate.net/). In May 2019, it was awarded a Lenovo Mirage Solo VR headset in a [contest held by UMass Digital Media Lab](https://www.edwoodbrice.com/databased/05/27/2019/a-tale-of-8-months-5-presentations/#the-honor-of-being-recognized).</span>
 </div>
 
 <hr style="border: none;">
@@ -70,9 +70,11 @@ PA. <span style="color:maroon">**METHODS**</span>: 3 men and women (aged 18-23 y
 
 ##### <span style="color:black"> Acknowledgements </span>
 * <span style="color:black">
-<div class = "blue">
- This study would not be possible without the guidance, supervision, and support of <a href=https://www.umass.edu/sphhs/person/faculty/catrine-tudor-locke>Dr. Catrine Tudor-Locke</a>, Professor and Associate Dean for Research and Administration in the Kinesiology Department at UMass Amherst. I am conducting this honors thesis in the framework of her year-long course, Wearable Technologies in Physical Activity and Health. On April 26th, 2019, my honors thesis was presented at the annual <a href=https://www.honors.umass.edu/massurc>Undergraduate Research Conference (MassURC)</a>. Thank you, Dr. Tudor-Locke!
- </div>
+I would like to extend a heartfelt thank you to all my volunteers, the UMass Digital Media Lab (Dr. Steve Acquah, Yuntian Hu, and several awesome DML staff), the UMass Rec Center (Jeanne Orr), CICS (Dr. Michelle Trim, Erika Dawnson-Head, Prof. Gordon Anderson, Prof. Neena Thota, Dean Laura Haas), and the STEM Ambassadors Program (the fantastic members of STEM AP, Carolyn Gardner and Sonji Johnson-Anderson)!
+</span>
+
+* <span style="color:black">
+Additionally, this study would not be possible without the guidance, supervision, and support of <a href=https://www.umass.edu/sphhs/person/faculty/catrine-tudor-locke>Dr. Catrine Tudor-Locke</a>, Professor and Associate Dean for Research and Administration in the Kinesiology Department at UMass Amherst. I am conducting this honors thesis in the framework of her year-long course, Wearable Technologies in Physical Activity and Health. On April 26th, 2019, my honors thesis was presented at the annual <a href=https://www.honors.umass.edu/massurc>Undergraduate Research Conference (MassURC)</a>. Thank you, Dr. Tudor-Locke, the Physical Activity & Health Lab and all my amazing cohort peers!
 </span>
 
 #### <span style="color:black"> Languages, Skills, & Technical Insight </span>{.tabset .tabset-fade}
