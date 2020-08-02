@@ -2,11 +2,11 @@
   <link rel="stylesheet" href="edwoodbrice_styles" type="text/css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
 <style type="text/css">
-  h1 { font-family: Raleway; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
-  h3 { font-family: Raleway; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } 
-  p { font-family: Raleway; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
-  blockquote { font-family: Raleway; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
-  pre { font-family: Raleway; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+  h1 { font-family: Raleway; font-size: 35px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
+  h3 { font-family: Raleway; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } 
+  p { font-family: Raleway; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+  blockquote { font-family: Raleway; font-size: 25px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
+  pre { font-family: Raleway; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 </style>
 </head>
 
@@ -14,7 +14,7 @@
 
 <title> Home - Edwood Brice </title>
 
-# <span style="color:maroon">About Me</span>
+# <span style="color:maroon;">About Me</span>
 
 * <span style="color:black">I graduated with a B.S. [Informatics & Data Science](https://www.cics.umass.edu/informatics) degree at the [University of Massachusetts Amherst](https://www.umass.edu) in May 2019. Data science is concerned with making sense of unstructured or structured data throughout disciplines including computer science, statistics, kinesiology, healthcare and etc. Informatics encompasses how one can effectively make use of collected data for the sake of answering meaningful questions that are produced by natural phenomena, consumers, students, and researchers alike. Together, they both support my effrots to become a data scientist that is equipped to handle today's ever-growing list of computational challenges. </span> 
 
