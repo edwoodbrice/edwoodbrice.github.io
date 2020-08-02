@@ -2,11 +2,47 @@
   <link rel="stylesheet" href="edwoodbrice_styles" type="text/css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
 <style type="text/css">
-  h1 { font-family: Raleway; font-size: 35px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } 
-  h3 { font-family: Raleway; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } 
-  p { font-family: Raleway; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
-  blockquote { font-family: Raleway; font-size: 25px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
-  pre { font-family: Raleway; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+  
+  h1 { 
+    font-family: Raleway; 
+    font-size: 35px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px; } 
+  
+  h3 { 
+    font-family: Raleway; 
+    font-size: 20px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 15.4px; } 
+  
+  p { 
+    font-family: Raleway; 
+    font-size: 16px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 20px; } 
+  
+  blockquote { 
+    font-family: Raleway; 
+    font-size: 25px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400; 
+    line-height: 30px; } 
+  
+  pre { 
+    font-family: Raleway; 
+    font-size: 18px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400;
+    line-height: 18.5714px; }
+    
 </style>
 </head>
 
@@ -16,13 +52,13 @@
 
 # <span style="color:maroon;">About Me</span>
 
-* <span style="color:black">I graduated with a B.S. [Informatics & Data Science](https://www.cics.umass.edu/informatics) degree at the [University of Massachusetts Amherst](https://www.umass.edu) in May 2019. Data science is concerned with making sense of unstructured or structured data throughout disciplines including computer science, statistics, kinesiology, healthcare and etc. Informatics encompasses how one can effectively make use of collected data for the sake of answering meaningful questions that are produced by natural phenomena, consumers, students, and researchers alike. Together, they both support my effrots to become a data scientist that is equipped to handle today's ever-growing list of computational challenges. </span> 
+* <span style="color:black">I graduated with a B.S. [Informatics & Data Science](https://www.cics.umass.edu/informatics) degree at the [University of Massachusetts Amherst](https://www.umass.edu) in May 2019. Data science is concerned with making sense of unstructured or structured data throughout disciplines and domains including computer science, statistics, kinesiology, health, biology, and etc. Informatics encompasses how one can effectively make use of collected data for the sake of answering meaningful questions that are produced by natural phenomena, consumers, students, and researchers alike. Together, they both support my efforts to become a data scientist that is equipped to handle today's ever-growing list of computational challenges. </span> 
 
-* <span style="color:black"> I am primarily interested in the research, technological, commercial, and [FAccT](https://facctconference.org/) (Fairness, Accountability, and Transparency) facets of informatics and data science. I intend to use my studies to acquire skills and experiences that are comprehensive and practical. Ultimately, I will use them to support my academic and professional careers that follow. Additionally, they will also impact my efforts to promote the wellbeing of people and the efficiency of the world around us.</span> 
+* <span style="color:black"> I am primarily interested in the research, technological, commercial, and [FAccT](https://facctconference.org/) (Fairness, Accountability, and Transparency) facets of informatics and data science. I intend to use my studies to acquire skills and experiences that are comprehensive and practical. Ultimately, I will use them to support my academic and professional careers that follow.</span> 
 
-* <span style="color:black"> I am currently working as a Junior Data Scientist at MassMutual in the Data Science Development Program (DSDP) in Amherst, Massachusetts. Through the DSDP, I intend to develop my data science career so that I can effectively handle today’s ever-growing list of computational challenges. I also mentor younger undergraduate peers in STEM through the UMass [STEM Ambassadors Program](https://www.stemapumass.org/) (STEM AP).</span> 
+* <span style="color:black"> I am currently working as a Junior Data Scientist at MassMutual in the Data Science Development Program (DSDP) in Amherst, Massachusetts. I also mentor younger undergraduate peers in STEM through the UMass [STEM Ambassadors Program](https://www.stemapumass.org/) (STEM AP). </span> 
 
-* <span style="color:black"> In my free time, I love to explore entreprenurial avenues that make use of my skills. I also take great interest in mentorship (both as a mentee and mentor) and developing tech venture ideas that make things easier for people. When I'm not doing that, I enjoy traveling, trying out new recipies, and breaking personal records at the gym! </span> 
+* <span style="color:black"> In my free time, I love to explore entrepreneurial avenues that make use of my skills through personal projects. Specifically, I enjoy developing tech venture ideas that target well-being and make things easier and more efficient for people. When I'm not doing that, I enjoy traveling, trying out new recipies, and breaking personal records at the gym! </span> 
 
 ***
 <span style="text-align:center">
